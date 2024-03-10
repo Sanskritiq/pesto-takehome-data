@@ -68,7 +68,7 @@ This repository contains a data engineering solution for AdvertiseX, a digital a
 
 ## Usage
 
-1. Run Cassandra Container using Docker
+1. Run Cassandra Container using Docker:
     ```bash
     docker run --name cassandra-container -p 9042:9042 -d cassandra:latest
     ```
@@ -90,7 +90,28 @@ This repository contains a data engineering solution for AdvertiseX, a digital a
     pip install -r requirements.txt
     ```
 5. Execute the scripts: 
-    Run `kafka/producer.py -n [num of messages]` to produce data and `kafka/consumer.py` to consume and store data.
+    - Run to produce data:
+    ```bash
+    python kafka/producer.py -n [num of messages]
+    ```
+    - Run the command to consume the data:
+    ```bash
+    python kafka/consumer.py
+    ```
+
+6. Database:
+    - To create tables:
+    ```bash
+    python dataset/execute.py --create
+    ```
+    - To print tables:
+    ```bash
+    python dataset/execute.py --check
+    ```
+    - To drop tables:
+    ```bash
+    python dataset/execute.py --drop
+    ```
 
 ## Requirements
 

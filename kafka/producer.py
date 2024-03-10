@@ -113,7 +113,7 @@ def produce(n):
             p.poll(1000)
             
         print(f"Produced message: {i}")
-        time.sleep(1)
+        # time.sleep(1)
         p.flush()
         
 if __name__ == "__main__":
