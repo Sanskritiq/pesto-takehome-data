@@ -14,7 +14,6 @@ class User(Model):
 class Website(Model):
     website_id = columns.UUID(primary_key=True)
     url = columns.Text()
-    title = columns.Text()
     
 class Ads(Model):
     creative_id = columns.UUID(primary_key=True)
